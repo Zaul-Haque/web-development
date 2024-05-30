@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center bg-primary" >Welcome To My Game Show</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" style="height: 30rem;">
+                <div class="card">
+                    <img height="325px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzCsvxGjkFwwuinUOqE777x5Ncj2S2I-J3zwZL0DIDRA&s" class="card-img-top" alt="dice">
+                        <div class="card-body">
+                            <h5 class="card-title">Dice</h5>
+                            <p class="card-text" id="p1"></p>
+                            <a href="#" class="btn btn-primary" onclick="dice()">Roll</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="height: 30rem;">
+                <div class="card">
+                    <img height="325px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-xifIY0H6h7xobbIcLqlD5GhBrHPtNMr9M91gwmYZA&s">
+                        <div class="card-body">
+                            <h5 class="card-title">Lunch Recommender</h5>
+                            <p class="card-text" id="p3"></p>
+                            <a href="#" class="btn btn-primary" onclick="lunchG()">Search</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="height: 30rem;">
+                <div class="card">
+                    <img height="325px" src="https://juliohm.github.io/assets/images/coin-flip.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Flip Coin</h5>
+                            <p class="card-text" id="p2"></p>
+                            <a href="#" class="btn btn-primary" onclick="coinFlipG()">Roll</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="height: 30rem;">
+                <div class="card">
+                    <img height="325px" src="https://media.licdn.com/dms/image/D4E12AQEESBzNwql5lw/article-cover_image-shrink_600_2000/0/1676955184042?e=2147483647&v=beta&t=9tEw5fRw7k35nJxd02k8F5KMFlAs5UzDiahc9LNBDJs">
+                        <div class="card-body">
+                            <h5 class="card-title">Gusse the no.</h5>
+                            <p class="card-text" id="p4"></p>
+                            <a href="#" class="btn btn-primary" onclick="numberGuess()">Search</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="height: 30rem;">
+                <div class="card">
+                    <img height="325px" src="https://img.freepik.com/free-vector/enter-otp-concept-illustration_114360-7877.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">OTP Generator</h5>
+                            <p class="card-text" id="p5"></p>
+                            <a href="#" class="btn btn-primary" onclick="otpG()">Search</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="height: 30rem;">
+                <div class="card">
+                    <img height="325px" src="https://img.freepik.com/premium-vector/hands-playing-rock-paper-scissors-game-flat-design-style-vector-illustration_540284-598.jpg?w=360">
+                        <div class="card-body">
+                            <h5 class="card-title">Rock paper sessor</h5>
+                            <p class="card-text" id="p6"></p>
+                            <a href="#" class="btn btn-primary" onclick="rps()">play</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+            
+        function dice() {
+            let ans = Math.floor(Math.random()*6)+1;
+            document.getElementById("p1").innerHTML = ans;
+        }
+
+        function lunchG(){
+            const menu = ['Pizza','Pasta','Burger','Idli','Chilly Patato','Baati','Dhosa','Dal Makhni','Garlic Nan']
+            var x = Math.floor(Math.random()*9)
+            document.getElementById("p3").innerText = menu[x]
+
+        }
+
+        function coinFlipG()
+        {
+        var result = Math.random() < 0.5 ? 'Heads' : 'Tails';
+        document.getElementById("p2").innerText = result;
+        }
+
+        function numberGuess() 
+        {
+        var numberToGuess = Math.floor(Math.random() * 10) + 1;
+        var userGuess = prompt("Guess a number between 1 and 10:");
+        if (parseInt(userGuess) === numberToGuess) 
+        {
+            document.getElementById("p4").innerText = "Correct!";
+        } else 
+        {
+            document.getElementById("p4").innerText = "Incorrect. The number was " + numberToGuess + ".";
+        }
+    }
+    function otpG(){
+            var x = Math.floor(Math.random()*(9999-1000))+1000
+            var c = Math.floor(Math.random()*(122-97))+97
+            c = String.fromCharCode(c)
+            document.getElementById("p5").innerText = c + x + c
+        }
+        function rps() {
+            const choices = ['Rock', 'Paper', 'Scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            document.getElementById('p6').textContent = 'Computer chose: ' + computerChoice;
+          }
+    </script>
+</body>
+</html>
