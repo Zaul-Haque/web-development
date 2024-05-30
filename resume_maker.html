@@ -1,0 +1,221 @@
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+	z-index: 1;
+	background: linear-gradient(-45deg,#A7F8B0,#D9B6EF,#F559A7);
+	animation: animate 15s ease infinite;
+}
+
+    h2 {
+        color: black;
+        text-align: center;
+	font-family: Algerian, arial;
+    }
+
+    table {
+        background-color: rgb(159, 192, 231);
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    table td {
+        padding: 4px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="date"],
+    input[type="file"],
+    select {
+        width: 100%;
+        padding: 4px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        vertical-align: middle;
+    }
+
+    button {
+        margin: 10px;
+    }
+
+    /* Symmetry modifications */
+    form {
+        width: 600px;
+        margin: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td:first-child {
+        width: 30%;
+    }
+
+    td:last-child {
+        width: 70%;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    /* Center align buttons */
+    p.align-center {
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+<h2>RESUME</h2>
+<form>
+    <table>
+        <tbody>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="Name"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><textarea rows="5" cols="50" name="address"></textarea></td>
+        </tr>
+        <tr>
+            <td>Photo:</td>
+            <td><input type="file" name="fileupload" accept="image/*"></td>
+        </tr>
+        <tr>
+            <td>Pincode:</td>
+            <td><input type="value" maxlength="6" name="Pincode"></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td><input type="value" maxlength="10" name="Phone_number"></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="email" name="Email_id"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <p><b>Career Objective:</b></p>
+    <textarea rows="3" cols="90" name="Objective"></textarea>
+    <br><br>
+
+    <p><b>Educational Qualification:</b></p>
+    <table>
+        <tbody>
+        <tr align="center">
+            <td><u><b>Course</b></u></td>
+            <td><u><b>Institution</b></u></td>
+            <td><u><b>Board</b></u></td>
+            <td><u><b>Percentage</b></u></td>
+            <td><u><b>Year of Passing</b></u></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="Course"></td>
+            <td><input type="text" name="Institution"></td>
+            <td><input type="text" name="Board"></td>
+            <td><input type="text" maxlength="5" name="Percentage"></td>
+            <td><input type="text" maxlength="4" name="Year_of_passing"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="Course"></td>
+            <td><input type="text" name="Institution"></td>
+            <td><input type="text" name="Board"></td>
+            <td><input type="text" maxlength="5" name="Percentage"></td>
+            <td><input type="text" maxlength="4" name="Year_of_passing"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="Course"></td>
+            <td><input type="text" name="Institution"></td>
+            <td><input type="text" name="Board"></td>
+            <td><input type="text" maxlength="5" name="Percentage"></td>
+            <td><input type="text" maxlength="4" name="Year_of_passing"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <p><b>Skills:</b></p>
+    <textarea rows="5" cols="40" name="Skills"></textarea>
+    <br><br>
+
+    <p><b>Hobbies:</b></p>
+    <textarea rows="5" cols="40" name="Hobbies"></textarea>
+    <br><br>
+
+    <p><b>Technical Skills:</b></p>
+    <input type="checkbox" name="java">Java<br>
+    <input type="checkbox" name="python">Python<br>
+    <input type="checkbox" name="cpp">CPP<br>
+    <input type="checkbox" name="html">HTML<br>
+    <input type="checkbox" name="php">PHP<br>
+    <input type="checkbox" name="rdbms">MySQL<br>
+    <input type="checkbox" name="msword">MS Word<br>
+    <input type="checkbox" name="msexcel">MS Excel<br>
+    <br>
+
+    <p><b>Personal Information:</b></p>
+    <p>
+        Father's Name: <input type="text" name="Father">
+        Mother's Name: <input type="text" name="Mother">
+    </p>
+    <p>
+        Date Of Birth: <input type="date" name="DOB">
+    </p>
+    <p>
+        Gender:
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="others">Others
+    </p>
+    <p>
+        Nation:
+        <select name="country">
+            <option value="India" selected>India</option>
+            <option value="Italy">Italy</option>
+            <option value="Germany">Germany</option>
+        </select>
+    </p>
+    <p>
+        State:
+        <select id="country-state" name="country-state">
+            <option value="BR">Bihar</option>
+            <option value="DL">Delhi</option>
+            <option value="JK">Jammu and Kashmir</option>
+            <option value="LA">Ladakh</option>
+            <option value="MP">Madhya Pradesh</option>
+            <option value="MH">Maharashtra</option>
+            <option value="OR">Odisha</option>
+            <option value="UP">Uttar Pradesh</option>
+            <option value="UT">Uttarakhand</option>
+            <option value="WB">West Bengal</option>
+        </select>
+    </p>
+    <p>
+        Languages Known:
+        <input type="text" name="Languages">
+    </p>
+    <br>
+
+    <p>
+        <input type="checkbox" name="declaration" value="on">
+        I hereby declare that the above information provided is true, complete, and correct to the best of my knowledge.
+    </p>
+
+    <p class="align-center">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">OK</button>
+    </p>
+</form>
+</body>
+</html>
